@@ -27,7 +27,7 @@ class TurnosController extends Controller
 
         $turnosAll = Turno::select('turno','caja')->orderBy('turno', 'desc')->get()->take(5);
 
-        /* event(new eventTurno(json_encode($turnosAll))); */
+        event(new eventTurno(json_encode($turnosAll)));
 
 
    /*      return response()->json($turnosAll); */
