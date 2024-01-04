@@ -23,12 +23,12 @@ Route::get('/', function () {
 
 Route::get('/reset', function () {
     DB::statement("TRUNCATE TABLE turnos;");
-    return view('auth.login');
+    return back()->withInput();
 });
 
 Route::get('/ajuste/{id}', function ($id) {
-    DB::statement("ALTER TABLE turnos AUTO_INCREMENT = $id"); 
-    return view('auth.login');
+    DB::statement("ALTER TABLE turnos AUTO_INCREMENT = $id");
+    return back()->withInput();
 });
 
 Route::get(

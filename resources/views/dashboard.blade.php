@@ -13,7 +13,7 @@
                         @isset($turno)
                         <h1>Turno:{{$turno}} </h1>
                         @endisset
-                       
+
                     </div>
                     <div class="container">
 
@@ -24,7 +24,12 @@
                                 <input type="text" name="user" class="form-control" id="name" value="{{Auth::user()->name}} " readonly>
                             </div>
                             <div class="d-flex align-item-center justify-content-center">
-                                <button type="submit" class="btn btn-dark text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">TOMAR TURNO</button>
+                                <button id="submitBtn" type="submit">
+                                    <img src="{{asset('/img/btn-rojo.png')}}" width="320" height="320" alt="Imagen del botón">
+                                    <b>TOMAR TURNO</b>
+                                </button>
+
+                                <!-- <button type="submit" class="btn btn-dark text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">TOMAR TURNO</button> -->
                             </div>
                         </form>
                     </div>
